@@ -18,10 +18,10 @@ c.execute('''SELECT *
             ''')
 
 for row in c.fetchall():
-    print('--------------- Testando a tabela --------------- ')
-    print('Nomes dos campos: ', row[6])
+    print('Test')
+    print('Nomes_dos_campos: ', row[6])
     print('PK: ', row[10])
-    print('Permissão de nulo: ', row[8])
+    print('Permissão_de_nulo: ', row[8])
     ## o numero está vinculado aq tabela do sqlite:
     #row[1] = nome da tabela
     #row[2] = nome da tabela
