@@ -3,18 +3,18 @@ conn = sqlite3.connect(':memory:')
 
 c = conn.cursor()
 
-c.execute('''CREATE TABLE exercicio1_brenda(
+c.execute('''CREATE TABLE exercicio1(
                 id integer,
                 nome text not null,
                 email text,
                 primary key (id) )'''
                 )
 
-c.execute("INSERT INTO exercicio1_brenda VALUES (1,'BRENDA OLIVEIRA','brenda@123.com')")
+c.execute("INSERT INTO exercicio1 VALUES (1,'Leandro','leandro@123.com')")
 
 c.execute('''SELECT * 
                 FROM sqlite_master AS m, pragma_table_info(m.name)
-                WHERE tbl_name = 'exercicio1_brenda'
+                WHERE tbl_name = 'exercicio1'
             ''')
 
 for row in c.fetchall():
